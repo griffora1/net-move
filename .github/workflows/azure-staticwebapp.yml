@@ -21,10 +21,10 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
+  skip_app_build: true
+  app_build_command: 'npm run build:azure'
   APP_LOCATION: "/" # location of your client code
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing deployment token for your static web app
-  app_build_command: 'npm run build:azure'
-  skip_app_build: true
 
 permissions:
   contents: read
